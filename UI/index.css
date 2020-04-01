@@ -1,0 +1,11 @@
+html, body {
+    margin: 1.4em;
+    padding: 0;
+}
+
+img {
+    padding: 1.4em;
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+}
