@@ -31,9 +31,11 @@ async function getDirFromRemote(dir){
 
         } else {
           dataDiv.innerHTML = '';
-          dirlist.dirlist.forEach(file => {
+          dirlist.dirlist.forEach(async file => {
+            let res = await axios.get(`${BASE_URL}/sftp/tmp/${file.name}`);
             dataDiv.innerHTML +=
             `${file.name} <br/>
+            <img src="/img/${res.data.reqfile}.${res.data.reqext}"><br/>
             `;
           });
           lastImage.src = "";

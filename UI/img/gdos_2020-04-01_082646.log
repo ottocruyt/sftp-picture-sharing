@@ -1,0 +1,1103 @@
+Tims (0): logfile created
+Tims (0): thread to delete old files created
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999802 
+Tims (0): Delete old Logs: nothing done
+ObjRecog (3): (ts: 24457 ms) Init
+ObjRecog (3): (ts: 24502 ms) create mbx in kernelspace of size 240
+ObjRecog (4): (ts: 24535 ms) Init
+ObjRecog (4): (ts: 24589 ms) create mbx in kernelspace of size 240
+ObjRecog (0): (ts: 24597 ms) Init
+ObjRecog (0): (ts: 24643 ms) create mbx in kernelspace of size 240
+Camera (0): (ts: 24710 ms) Init
+Scan3d (1): (ts: 24714 ms) Init
+ObjRecog (1): (ts: 24797 ms) Init
+Planner (0): (ts: 24809 ms) Init
+Planner (1): (ts: 24844 ms) Init
+Planner (0): (ts: 24911 ms) All PDOs sucessfully setup
+Camera (0): (ts: 24930 ms) create mbx in kernelspace of size 240
+Scan3d (0): (ts: 24950 ms) Init
+ObjRecog (0): (ts: 24955 ms) Points in Y-direction must be [1...64]!
+ObjRecog (0): (ts: 24955 ms) Points in Z-direction must be [1...40]!
+ObjRecog (1): (ts: 24960 ms) create mbx in kernelspace of size 240
+ObjRecog (0): (ts: 24974 ms) Proxy cmd 1 to GridMap3d (0): Replied - not available 
+ObjRecog (0): (ts: 24974 ms) Can't turn on gridMap(0), code = -61
+ObjRecog (0): (ts: 24974 ms) Error, can't turn on module
+ObjRecog (2): (ts: 24977 ms) Init
+ObjRecog (0): (ts: 24984 ms) Proxy cmd 22 to GridMap3d (0): Replied - not available 
+ObjRecog (0): (ts: 24985 ms) Proxy cmd 7 to GridMap3d (0): Replied - not available 
+ObjRecog (2): (ts: 25096 ms) create mbx in kernelspace of size 240
+Scan3d (1): (ts: 25162 ms) create mbx in kernelspace of size 240
+GridMap3d (0): (ts: 25165 ms) Init
+GridMap3d (0): (ts: 25234 ms) Databuffer of size 7372926 created
+GridMap3d (0): (ts: 25235 ms) create mbx in kernelspace of size 240
+GridMap3d (0): (ts: 25235 ms) create mbx in userspace of size 7372926
+Planner (1): (ts: 25278 ms) Path to file  Unhandled parameter "s"
+Planner (1): (ts: 25278 ms) Path to file  Unhandled parameter "s"
+Planner (1): (ts: 25279 ms) Read HW-version 100
+Planner (1): (ts: 25280 ms) Read HW-version 12
+Planner (1): (ts: 25281 ms) Read software ID 1583402245
+Planner (1): (ts: 25281 ms) Read LiRE-version 0
+Planner (1): (ts: 25282 ms) Read LiRE software ID 0
+Planner (1): (ts: 25282 ms) BootSource on CAN is 0
+Planner (1): (ts: 25383 ms) System ready!
+Planner (1): (ts: 25383 ms) Module on
+Scan3d (0): (ts: 25658 ms) Sorting - 180 degrees
+Scan3d (0): (ts: 25761 ms) Got calibration data from camera
+Scan3d (0): (ts: 25880 ms) Module on
+Camera (0): (ts: 25978 ms) Module on
+Planner (0): (ts: 29913 ms) Proxy cmd to ObjRecog (0): Can't receive reply of command 1, ret = -110 (timeout was 705032704)
+Planner (0): (ts: 29913 ms) workMbx->recvMsgTimed failed (try 0/5)
+Planner (0): (ts: 29985 ms) Proxy cmd 1 to ObjRecog (0): Replied - error -
+Planner (0): (ts: 29985 ms) Can't switch on objRecogPalette (ret=-70)
+Planner (0): (ts: 29985 ms) Error, can't turn on module
+ObjRecog (0): (ts: 31985 ms) Points in Y-direction must be [1...64]!
+ObjRecog (0): (ts: 31985 ms) Points in Z-direction must be [1...40]!
+GridMap3d (0): (ts: 31989 ms) Points in Y-direction must be [1...64]!
+GridMap3d (0): (ts: 31989 ms) Points in Z-direction must be [1...40]!
+Scan3d (1): (ts: 32051 ms) receiving data from scan3d with 200 periodtime
+Scan3d (1): (ts: 32156 ms) Module on
+GridMap3d (0): (ts: 32156 ms) Getting data of scan3droi with 200 periodTime
+GridMap3d (0): (ts: 32327 ms) Module on
+ObjRecog (0): (ts: 32525 ms) Module on
+ObjRecog (1): (ts: 32980 ms) Points in Y-direction must be [1...64]!
+ObjRecog (1): (ts: 32980 ms) Points in Z-direction must be [1...40]!
+ObjRecog (1): (ts: 33120 ms) Module on
+ObjRecog (2): (ts: 33170 ms) Points in Y-direction must be [1...64]!
+ObjRecog (2): (ts: 33170 ms) Points in Z-direction must be [1...40]!
+ObjRecog (2): (ts: 33316 ms) Module on
+ObjRecog (3): (ts: 33397 ms) Points in Y-direction must be [1...64]!
+ObjRecog (3): (ts: 33397 ms) Points in Z-direction must be [1...40]!
+ObjRecog (3): (ts: 33514 ms) Module on
+ObjRecog (4): (ts: 33691 ms) Points in Y-direction must be [1...64]!
+ObjRecog (4): (ts: 33691 ms) Points in Z-direction must be [1...40]!
+ObjRecog (4): (ts: 33748 ms) Module on
+Planner (0): (ts: 33748 ms) Can't get continuous data from objRecogRect(4), code = 0
+Planner (0): (ts: 33854 ms) Module on
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999603 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999405 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999405 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999405 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999405 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999405 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999405 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999405 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999405 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999405 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999405 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999405 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999405 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999405 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999405 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999405 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999405 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.999405 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966774 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966774 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966774 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966774 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966774 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966774 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966774 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966774 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966774 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966774 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966774 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966774 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966774 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966774 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966774 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966774 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966774 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966774 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966774 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966774 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966583 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966385 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.966187 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965981 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965790 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965591 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965393 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.965195 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964996 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964798 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964600 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
+Tims (0): Delete old Logs: prove availabe freedisk space: 99.964401 
+Tims (0): Delete old Logs: nothing done
