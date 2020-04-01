@@ -13,9 +13,6 @@ const dataDiv = document.getElementById("data");
 const lastImage = document.getElementById("lastimage");
 const filename = document.getElementById("filename");
 
-
-
-
 async function getDirFromRemote(dir){
     console.log(`getDirFromRemote called with ${dir}`)
     try {
@@ -39,6 +36,7 @@ async function getDirFromRemote(dir){
             `${file.name} <br/>
             `;
           });
+          lastImage.src = "";
         }
 
         return dirlist;
