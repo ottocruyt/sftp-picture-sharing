@@ -16,7 +16,7 @@ const filename = document.getElementById("filename");
 async function getDirFromRemote(dir){
     console.log(`getDirFromRemote called with ${dir}`)
     try {
-        const res = await axios.get(`${BASE_URL}/sftp/${dir}`);
+        const res = await axios.get(`${BASE_URL}/sftp/list/${dir}`);
     
         const dirlist = res.data;
     
@@ -32,7 +32,7 @@ async function getDirFromRemote(dir){
         } else {
           dataDiv.innerHTML = '';
           dirlist.dirlist.forEach(async file => {
-            let res = await axios.get(`${BASE_URL}/sftp/tmp/${file.name}`);
+            let res = await axios.get(`${BASE_URL}/sftp/file/${file.name}`);
             dataDiv.innerHTML +=
             `${file.name} <br/>
             <img src="/img/${res.data.reqfile}.${res.data.reqext}"><br/>
@@ -50,7 +50,7 @@ async function getDirFromRemote(dir){
 async function getFileFromRemote(file){
   console.log(`getFileFromRemote called with ${file}`)
   try {
-      const res = await axios.get(`${BASE_URL}/sftp/tmp/${file}`);
+      const res = await axios.get(`${BASE_URL}/sftp/file/${file}`);
   
       const responseFile = res.data;
   
