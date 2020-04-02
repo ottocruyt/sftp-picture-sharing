@@ -1,4 +1,5 @@
-const BASE_URL = "http://localhost:3000";
+const color = "#ba004e";
+const BASE_URL = "http://localhost:3000"; // replace localhost with the IP of the server running
 document.getElementById("btn-list").addEventListener("click", function(e) {
   e.preventDefault();
   getDirFromRemote("tmp");
@@ -12,36 +13,38 @@ const folderHeader = document.getElementById("header");
 const dataDiv = document.getElementById("data");
 const lastImage = document.getElementById("lastimage");
 const filename = document.getElementById("filename");
+let images = [];
 
 async function getDirFromRemote(dir){
     console.log(`getDirFromRemote called with ${dir}`)
     try {
         const res = await axios.get(`${BASE_URL}/sftp/list/${dir}`);
     
-        const dirlist = res.data;
-    
+        const dirlist = await res.data;
         console.log(`GET: here is the directory list: `, dirlist);
-
         
         folderHeader.innerText = `Requested Folder: ${dirlist.reqdir}`;
+        
         if(dirlist.err){
           dataDiv.innerHTML =
           `${dirlist.errcode}
           `;
-
         } else {
           dataDiv.innerHTML = '';
+          images = [];
           dirlist.dirlist.forEach(async file => {
             let res = await axios.get(`${BASE_URL}/sftp/file/${file.name}`);
-            dataDiv.innerHTML +=
-            `${file.name} <br/>
-            <img src="/img/${res.data.reqfile}.${res.data.reqext}"><br/>
-            `;
+            let date = new Date(file.modifyTime);
+            images.push({
+              name: file.name,
+              src: `/img/${res.data.reqfile}.${res.data.reqext}`,
+              date
+            });
           });
           lastImage.src = "";
+          console.log("putting image array in html");
+          putImageArrayInHtml();
         }
-
-        return dirlist;
       } catch (e) {
         console.error(e);
       }
@@ -73,6 +76,20 @@ async function getFileFromRemote(file){
     }
 }
 
+function putImageArrayInHtml(){
+  // for some reason its not putting it in the innerhtml, but after loading calling it manually does work...
+  console.log("started putting in html, first sort");
+  images.sort((a,b) => {return a.date-b.date});
+  console.log("sorted");
+  console.log("images after sorting:",images);
+  images.forEach(image => {
+    dataDiv.innerHTML +=    `<h2>${image.date.toLocaleString}  (${image.name})</h2><br/>
+    <img src=${image.src}><br/>
+    `;
+    console.log(dataDiv.innerHTML);
+  });
+  console.log("finished for each");
+}
 
 
 

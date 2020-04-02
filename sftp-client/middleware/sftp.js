@@ -3,8 +3,8 @@ const RACK_IP = process.env.RACK_IP;
 const RACK_PORT = process.env.RACK_PORT;
 const RACK_USER = process.env.RACK_USER;
 const RACK_PASSWORD = process.env.RACK_PASSWORD;
-const CORS_ORIGIN = process.env.CORS_ORIGIN; //http://localhost:5500
-
+const CORS_ORIGIN = process.env.CORS_ORIGIN;
+const LOCAL_IMG_PATH = "./UI/img/"; // local path of the node server.
 
 const SFTPrequestList = async (req,res,next)=>{
     let reqdirlist = req.params.directory;
@@ -70,7 +70,7 @@ const SFTPrequestList = async (req,res,next)=>{
       });
 
       let remotePath = `/tmp/${reqfile}.${reqext}`;
-      let localPath = `C:\\Users\\cruyto\\Desktop\\webserverRack\\nodejsSFTP\\UI\\img\\${reqfile}.${reqext}`
+      let localPath = `${LOCAL_IMG_PATH}${reqfile}.${reqext}`
       console.log(`Download from ${remotePath} to ${localPath}`);
       let downloadresult = await sftp.fastGet(remotePath, localPath);
       console.log("DLRES:",downloadresult);
@@ -127,7 +127,7 @@ const SFTPrequestList = async (req,res,next)=>{
       });
 
       let remotePath = `/${reqfolder}`;
-      let localPath = `C:\\Users\\cruyto\\Desktop\\webserverRack\\nodejsSFTP\\UI\\img\\${reqfolder}`
+      let localPath = `${LOCAL_IMG_PATH}${reqfolder}`
       console.log(`Download from ${remotePath} to ${localPath}`);
       sftp.on('download', info => {
           console.log(`Listener: Download ${info.source}`);

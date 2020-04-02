@@ -1,4 +1,6 @@
 
+
+
 html, body {
     height: auto;
     margin: 1.4em;
@@ -9,4 +11,8 @@ img {
     display: block;
     max-height: 75%;
     max-width: 75%;
+}
+
+.header {
+    display: none;
 }

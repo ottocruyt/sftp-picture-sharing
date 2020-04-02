@@ -25,6 +25,7 @@ app.get('/sftp/download/:directory',middleware.sftp.SFTPdownloadDir,(req,res)=>{
   res.end();
 })
 
+app.use(express.static('UI')); // this is the web page being served.
 
 app.listen(process.env.PORT,(req,res)=>{
     console.log(`server running on http://localhost:${process.env.PORT}`)
