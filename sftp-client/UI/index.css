@@ -1,18 +1,7 @@
-
-
-
-html, body {
-    height: auto;
-    margin: 1.4em;
-    padding: 0;
-}
-
-img {
-    display: block;
-    max-height: 75%;
-    max-width: 75%;
-}
-
-.header {
-    display: none;
+.logo {
+  max-height: 50px;
+  height: auto;
+  width: fit-content;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
 }

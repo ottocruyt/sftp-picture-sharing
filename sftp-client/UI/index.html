@@ -1,24 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Otto Cruyt" />
     <title>Picture Sharing interface</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel='icon' href='favicon.ico' type='image/x-icon'/>
-</head>
-<body>
-    <div class="inputform">
-        <input type="text" id="filename">
-        <button id="btn-list" type="button">GET DIRECTORY LIST</button>
-        <button id="btn-file" type="button">GET FILE</button>
-    </div>
-    <h1 id="header" class="header"></h1>
-    <div id="data"></div>
-    <img src="" id="lastimage">
-    
-    
-</body>
-<script src="axios.min.js"></script>
-<script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script src="bootstrap/js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="bootstrap/css/sticky-footer-navbar.css" />
+    <link
+      rel="application/json"
+      href="bootstrap/css/bootstrap-grid.min.css.map"
+    />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-reboot.min.css" />
+    <link
+      rel="application/json"
+      href="bootstrap/css/bootstrap-reboot.min.css.map"
+    />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="application/json" href="bootstrap/css/bootstrap.min.css.map" />
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="application/json" href="js/bootstrap.bundle.min.js.map" />
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="application/json" href="js/bootstrap.min.js.map" />
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="bootstrap/css/sticky-footer-navbar.css" />
+  </head>
+  <body class="d-flex flex-column h-100">
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand">Picture Sharing Interface</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Latest Pictures<span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Settings</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main role="main" class="container">
+      <div class="container">
+        <button class="btn btn-dark" id="btn-list" type="button">GET</button>
+        <h1 id="header" class="header"></h1>
+        <div id="data"></div>
+        <img src="" id="lastimage" />
+      </div>
+    </main>
+    <footer class="footer mt-auto">
+      <div class="container">
+        <span class="text-muted"
+          ><img src="kion_group_logo.svg" class="img logo" /> KION MOBILE
+          AUTOMATION</span
+        >
+      </div>
+    </footer>
+  </body>
+  <script src="axios.min.js"></script>
+  <script src="index.js"></script>
 </html>

@@ -5,11 +5,6 @@ document.getElementById('btn-list').addEventListener('click', function(e) {
   e.preventDefault();
   getDirFromRemote('tmp');
 });
-document.getElementById('btn-file').addEventListener('click', function(e) {
-  e.preventDefault();
-  const requestedFilename = filename.value;
-  getFileFromRemote(requestedFilename);
-});
 const folderHeader = document.getElementById('header');
 const dataDiv = document.getElementById('data');
 const lastImage = document.getElementById('lastimage');
