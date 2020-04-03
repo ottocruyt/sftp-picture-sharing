@@ -69,9 +69,8 @@ const SFTPrequestFile = async (req, res, next) => {
   try {
     if (fs.existsSync(pathToImg)) {
       console.log(
-        `No need get ${reqfile}.${reqext} from RACK because already exists:`
+        `No need get ${reqfile}.${reqext} from RACK because already exists: ${pathToImg}`
       );
-      console.log(`${pathToImg}`);
       fileExists = true;
     }
   } catch (err) {
@@ -118,9 +117,9 @@ const SFTPrequestFile = async (req, res, next) => {
     err: sftpError,
     errcode: sftpErrorCode
   };
-  //console.log("Response: ", dlres);
+  //console.log('Response:');
+  //console.table(dlres);
   res.json(dlres);
-  //console.log("dirlist: ",dirlist);
   next();
 };
 
