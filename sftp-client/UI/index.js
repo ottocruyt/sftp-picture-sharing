@@ -1,5 +1,5 @@
 const color = "#ba004e";
-const BASE_URL = "http://localhost:3000"; // replace localhost with the IP of the server running
+const BASE_URL = "http://localhost:3000"; // replace localhost with the IP of the server running (10.203.214.38)
 document.getElementById("btn-list").addEventListener("click", function(e) {
   e.preventDefault();
   getDirFromRemote("tmp");
@@ -32,7 +32,7 @@ async function getDirFromRemote(dir){
         } else {
           dataDiv.innerHTML = '';
           images = [];
-          dirlist.dirlist.forEach(async file => {
+          await Promise.all(dirlist.dirlist.map(async file => {
             let res = await axios.get(`${BASE_URL}/sftp/file/${file.name}`);
             let date = new Date(file.modifyTime);
             images.push({
@@ -40,9 +40,8 @@ async function getDirFromRemote(dir){
               src: `/img/${res.data.reqfile}.${res.data.reqext}`,
               date
             });
-          });
+          }));
           lastImage.src = "";
-          console.log("putting image array in html");
           putImageArrayInHtml();
         }
       } catch (e) {
@@ -77,18 +76,12 @@ async function getFileFromRemote(file){
 }
 
 function putImageArrayInHtml(){
-  // for some reason its not putting it in the innerhtml, but after loading calling it manually does work...
-  console.log("started putting in html, first sort");
-  images.sort((a,b) => {return a.date-b.date});
-  console.log("sorted");
-  console.log("images after sorting:",images);
+  images.sort((a,b) => {return b.date-a.date});
   images.forEach(image => {
-    dataDiv.innerHTML +=    `<h2>${image.date.toLocaleString}  (${image.name})</h2><br/>
+    dataDiv.innerHTML +=    `<h2>${image.date.toLocaleString()}  (${image.name})</h2><br/>
     <img src=${image.src}><br/>
     `;
-    console.log(dataDiv.innerHTML);
   });
-  console.log("finished for each");
 }
 
 

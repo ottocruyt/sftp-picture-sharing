@@ -85,7 +85,7 @@ const SFTPrequestList = async (req,res,next)=>{
           err: false,
           errcode: null
       };
-      console.log("Response: ", dlres);
+      //console.log("Response: ", dlres);
       res.json(dlres);
       //console.log("dirlist: ",dirlist);
   
@@ -144,7 +144,7 @@ const SFTPrequestList = async (req,res,next)=>{
           err: false,
           errcode: null
       };
-      console.log("Response: ", dlres);
+      //console.log("Response: ", dlres);
       res.json(dlres);
       //console.log("dirlist: ",dirlist);
     } catch(err) {

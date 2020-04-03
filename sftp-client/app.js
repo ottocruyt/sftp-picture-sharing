@@ -10,18 +10,18 @@ app.use(middleware.logger);
 
 // users route // 
 app.get('/sftp/list/:directory',middleware.sftp.SFTPrequestList,(req,res)=>{
-  console.log("req.params.directory:", req.params.directory);
+  //console.log("req.params.directory:", req.params.directory);
   res.end();
 })
 
 app.get('/sftp/file/:file.:ext',middleware.sftp.SFTPrequestFile,(req,res)=>{
-  console.log("req.params.file:", req.params.file);
-  console.log("req.params.ext:", req.params.ext);
+  //console.log("req.params.file:", req.params.file);
+  //console.log("req.params.ext:", req.params.ext);
   res.end();
 })
 
 app.get('/sftp/download/:directory',middleware.sftp.SFTPdownloadDir,(req,res)=>{
-  console.log("req.params.directory:", req.params.directory);
+  //console.log("req.params.directory:", req.params.directory);
   res.end();
 })
 
