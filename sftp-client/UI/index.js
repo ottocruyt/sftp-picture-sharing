@@ -1,15 +1,27 @@
 const color = '#ba004e';
 const BASE_URL = 'http://localhost:3000'; // replace localhost with the IP of the server running (10.203.214.38)
 
-document.getElementById('btn-list').addEventListener('click', function(e) {
-  e.preventDefault();
+window.onload = function () {
   getDirFromRemote('tmp');
-});
+};
 const folderHeader = document.getElementById('header');
-const dataDiv = document.getElementById('data');
-const lastImage = document.getElementById('lastimage');
-const filename = document.getElementById('filename');
+const nextBtn = document.getElementById('next');
+const prevBtn = document.getElementById('prev');
+const sliderImg = document.getElementById('slider_img');
+const imgHeader = document.getElementById('img-header');
+
+nextBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  goToNextImage();
+});
+prevBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  goToPrevImage();
+});
+
 let images = [];
+let currentImg = {};
+let currentImgIndex = 0;
 
 async function getDirFromRemote(dir) {
   try {
@@ -18,26 +30,25 @@ async function getDirFromRemote(dir) {
     const dirlist = await res.data;
     console.log(`GET: here is the directory list: `, dirlist);
 
-    folderHeader.innerText = `Requested Folder: ${dirlist.reqdir}`;
+    //folderHeader.innerText = `Requested Folder: ${dirlist.reqdir}`;
 
     if (dirlist.err) {
-      dataDiv.innerHTML = `${dirlist.errcode}
+      folderHeader.innerHTML = `${dirlist.errcode}
           `;
     } else {
-      dataDiv.innerHTML = '';
+      //dataDiv.innerHTML = '';
       images = [];
       await Promise.all(
-        dirlist.dirlist.map(async file => {
+        dirlist.dirlist.map(async (file) => {
           let res = await axios.get(`${BASE_URL}/sftp/file/${file.name}`);
           let date = new Date(file.modifyTime);
           images.push({
             name: file.name,
             src: `/img/${res.data.reqfile}.${res.data.reqext}`,
-            date
+            date,
           });
         })
       );
-      lastImage.src = '';
       putImageArrayInHtml();
     }
   } catch (e) {
@@ -45,6 +56,7 @@ async function getDirFromRemote(dir) {
   }
 }
 
+// not used anymore
 async function getFileFromRemote(file) {
   try {
     const res = await axios.get(`${BASE_URL}/sftp/file/${file}`);
@@ -71,11 +83,48 @@ function putImageArrayInHtml() {
   images.sort((a, b) => {
     return b.date - a.date;
   });
-  images.forEach(image => {
-    dataDiv.innerHTML += `<h2>${image.date.toLocaleString()}  (${
-      image.name
-    })</h2><br/>
-    <img src=${image.src}><br/>
-    `;
-  });
+  currentImg = images[0];
+  currentImgIndex = images.indexOf(currentImg);
+  showCurrentImage();
+}
+
+function showCurrentImage() {
+  imgHeader.innerHTML = `${currentImg.date.toLocaleString()} (${
+    currentImg.name
+  })`;
+  sliderImg.src = currentImg.src;
+  disableNavigationButtonIfNeeded();
+}
+
+function goToNextImage() {
+  if (currentImgIndex + 1 < images.length) {
+    currentImg = images[currentImgIndex + 1];
+    currentImgIndex++;
+    showCurrentImage();
+  }
+}
+
+function goToPrevImage() {
+  if (currentImgIndex - 1 >= 0) {
+    currentImg = images[currentImgIndex - 1];
+    currentImgIndex--; // index -1
+    showCurrentImage();
+  }
+}
+
+function disableNavigationButtonIfNeeded() {
+  if (currentImgIndex + 1 === images.length) {
+    nextBtn.disabled = true;
+    nextBtn.classList.add('disabled');
+  } else {
+    nextBtn.disabled = false;
+    nextBtn.classList.remove('disabled');
+  }
+  if (currentImgIndex === 0) {
+    prevBtn.disabled = true;
+    prevBtn.classList.add('disabled');
+  } else {
+    prevBtn.disabled = false;
+    prevBtn.classList.remove('disabled');
+  }
 }

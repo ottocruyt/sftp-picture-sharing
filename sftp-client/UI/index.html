@@ -8,17 +8,7 @@
     <link rel="stylesheet" type="text/css" href="index.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <script src="bootstrap/js/jquery-3.4.1.min.js"></script>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css" />
     <link rel="stylesheet" href="bootstrap/css/sticky-footer-navbar.css" />
-    <link
-      rel="application/json"
-      href="bootstrap/css/bootstrap-grid.min.css.map"
-    />
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-reboot.min.css" />
-    <link
-      rel="application/json"
-      href="bootstrap/css/bootstrap-reboot.min.css.map"
-    />
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
     <link rel="application/json" href="bootstrap/css/bootstrap.min.css.map" />
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -77,19 +67,30 @@
     </header>
 
     <!-- Begin page content -->
-    <main role="main" class="container">
+    <main role="main" class="container mb-3">
       <div class="container">
-        <button class="btn btn-dark" id="btn-list" type="button">GET</button>
         <h1 id="header" class="header"></h1>
-        <div id="data"></div>
-        <img src="" id="lastimage" />
+      <div class="container">
+        <div class="slider_wrapper">
+          <h2 class="img-header" id="img-header"></h2>
+          <br />
+          <div class="container nvgt-container mt-1 pb-3 mb-3">
+            <button type="button" class="btn nvgt btn-dark" id="prev">
+              PREVIOUS
+            </button>
+            <button type="button" class="btn nvgt btn-dark" id="next">
+              NEXT
+            </button>
+          </div> <br/>
+          <img src="" id="slider_img" />
+          
+        </div>
       </div>
     </main>
     <footer class="footer mt-auto">
-      <div class="container">
+      <div class="container ml-0">
         <span class="text-muted"
-          ><img src="kion_group_logo.svg" class="img logo" /> KION MOBILE
-          AUTOMATION</span
+          ><img src="kion_group_logo.svg" class="logo" /></span
         >
       </div>
     </footer>

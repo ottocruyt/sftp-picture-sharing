@@ -2,6 +2,26 @@
   max-height: 50px;
   height: auto;
   width: fit-content;
-  margin-top: 0.1em;
-  margin-bottom: 0.1em;
+}
+.slider_wrapper {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#next {
+  float: right;
+}
+#prev {
+  float: left;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
+#slider_img {
+  width: 100%;
+  height: auto;
 }
