@@ -8,13 +8,28 @@
     <link rel="stylesheet" type="text/css" href="index.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <script src="bootstrap/js/jquery-3.4.1.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <link rel="application/json" href="js/popper.min.js.map" />
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="application/json" href="js/bootstrap.bundle.min.js.map" />
+
     <link rel="stylesheet" href="bootstrap/css/sticky-footer-navbar.css" />
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
     <link rel="application/json" href="bootstrap/css/bootstrap.min.css.map" />
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <link rel="application/json" href="js/bootstrap.bundle.min.js.map" />
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <link rel="application/json" href="js/bootstrap.min.js.map" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css" />
+    <link rel="application/json" href="bootstrap/css/bootstrap-grid.min.css.map" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-reboot.min.css" />
+    <link rel="application/json" href="bootstrap/css/bootstrap-reboot.min.css.map" />
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+      })
+    </script>
+
 
     <style>
       .bd-placeholder-img {
@@ -54,12 +69,21 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#"
+              <a class="nav-link" href="#" id="nav-link-latest"
                 >Latest Pictures<span class="sr-only">(current)</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Settings</a>
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#settingsModal">Settings</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select Vehicle
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Vehicle 1</a>
+                <a class="dropdown-item" href="#">Vehicle 2</a>
+              </div>
             </li>
           </ul>
         </div>
@@ -71,6 +95,9 @@
       <div class="container">
         <h1 id="header" class="header"></h1>
       <div class="container">
+        <div class="progress" id="progress-bar-div">
+          <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">0%</div>
+        </div>
         <div class="slider_wrapper">
           <h2 class="img-header" id="img-header"></h2>
           <br />
@@ -83,10 +110,10 @@
             </button>
           </div> <br/>
           <img src="" id="slider_img" />
-          
         </div>
       </div>
     </main>
+
     <footer class="footer mt-auto">
       <div class="container ml-0">
         <span class="text-muted"
@@ -94,6 +121,50 @@
         >
       </div>
     </footer>
+
+    <!-- Settings modal begin -->
+    <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Settings</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="rack-username">Rack Username</label>
+                <input type="text" class="form-control" id="rack-username" placeholder="Enter Rack Username" autocomplete="on">
+              </div>
+              <div class="form-group">
+                <label for="rack-password">Rack Password</label>
+                <input type="password" class="form-control" id="rack-password" placeholder="Enter Rack Password"autocomplete="on">
+              </div>
+              <div class="form-group">
+                <label for="rack-password">Rack Port</label>
+                <input type="number" class="form-control" id="rack-port" placeholder="Enter Rack Port number">
+              </div>
+              <div class="form-group">
+                <label for="rack-folder">Rack Folder</label>
+                <input type="text" class="form-control" id="rack-folder" placeholder="Enter Rack Folder">
+              </div>
+              <div class="form-group">
+                <label for="vehicle-xml">Select vehicle.xml</label>
+                <input type="file" class="form-control-file" id="vehicle-xml">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-warning" data-dismiss="modal" id="btn-save-settings">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Settings modal end -->
+
   </body>
   <script src="axios.min.js"></script>
   <script src="index.js"></script>

@@ -1,14 +1,19 @@
 const color = '#ba004e';
 const BASE_URL = 'http://localhost:3000'; // replace localhost with the IP of the server running (10.203.214.38)
+const RACK_FOLDER = 'tmp'; // folder on the rack where to get the files
 
 window.onload = function () {
-  getDirFromRemote('tmp');
+  getDirFromRemote(RACK_FOLDER);
 };
 const folderHeader = document.getElementById('header');
 const nextBtn = document.getElementById('next');
 const prevBtn = document.getElementById('prev');
 const sliderImg = document.getElementById('slider_img');
 const imgHeader = document.getElementById('img-header');
+const navLinkLatest = document.getElementById('nav-link-latest');
+const saveSettings = document.getElementById('btn-save-settings');
+const progressBar = document.getElementById('progress-bar');
+const progressBarDiv = document.getElementById('progress-bar-div');
 
 nextBtn.addEventListener('click', function (e) {
   e.preventDefault();
@@ -18,12 +23,22 @@ prevBtn.addEventListener('click', function (e) {
   e.preventDefault();
   goToPrevImage();
 });
+navLinkLatest.addEventListener('click', function (e) {
+  e.preventDefault();
+  getDirFromRemote(RACK_FOLDER);
+});
+saveSettings.addEventListener('click', function (e) {
+  e.preventDefault();
+  console.log('saving settings');
+  // should post settings... locally?
+});
 
 let images = [];
 let currentImg = {};
 let currentImgIndex = 0;
 
 async function getDirFromRemote(dir) {
+  setProgress(0);
   try {
     const res = await axios.get(`${BASE_URL}/sftp/list/${dir}`);
 
@@ -39,7 +54,7 @@ async function getDirFromRemote(dir) {
       //dataDiv.innerHTML = '';
       images = [];
       await Promise.all(
-        dirlist.dirlist.map(async (file) => {
+        dirlist.dirlist.map(async (file, index) => {
           let res = await axios.get(`${BASE_URL}/sftp/file/${file.name}`);
           let date = new Date(file.modifyTime);
           images.push({
@@ -47,6 +62,9 @@ async function getDirFromRemote(dir) {
             src: `/img/${res.data.reqfile}.${res.data.reqext}`,
             date,
           });
+          if (dirlist.dirlist.length !== 0) {
+            setProgress(images.length / dirlist.dirlist.length);
+          }
         })
       );
       putImageArrayInHtml();
@@ -85,6 +103,7 @@ function putImageArrayInHtml() {
   });
   currentImg = images[0];
   currentImgIndex = images.indexOf(currentImg);
+  //setProgress(1); // ensure the progress is 100%
   showCurrentImage();
 }
 
@@ -126,5 +145,19 @@ function disableNavigationButtonIfNeeded() {
   } else {
     prevBtn.disabled = false;
     prevBtn.classList.remove('disabled');
+  }
+}
+
+function setProgress(progress) {
+  console.log('Setting progress to: ', progress);
+  progressBar.setAttribute('aria-valuenow', progress * 100);
+  progressBar.setAttribute('style', `width: ${progress * 100}%`);
+  progressBar.innerText = `${progress * 100}%`;
+  if (progress === 1) {
+    progressBar.style.display = 'none';
+    progressBarDiv.style.display = 'none';
+  } else {
+    progressBar.style.display = 'block';
+    progressBarDiv.style.display = 'block';
   }
 }
