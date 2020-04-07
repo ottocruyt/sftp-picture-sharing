@@ -1,32 +1,56 @@
-const middleware = require("./middleware/middleware");
+const middleware = require('./middleware/middleware');
+const cronjobs = require('./cron/cron-sftp');
 require('dotenv').config();
+
+// CRON JOB
+const cron = require('node-cron');
+
 // WEB SERVER
 const express = require('express');
-const app = express()
+const app = express();
 
+// cron jobs
+// * * * * * = every minute
+// * * * * * * = every second
+cron.schedule('* * * * *', async function () {
+  console.log('Running Cron Job at: ', new Date().toLocaleString());
+  cronjobs
+    .SFTPdownloadDir()
+    .catch((error) => console.log('Problem in Cron Job: ', error.message));
+});
 
-// application level middleware
+// application level middleware for logging
 app.use(middleware.logger);
 
-// users route // 
-app.get('/sftp/list/:directory',middleware.sftp.SFTPrequestList,(req,res)=>{
-  //console.log("req.params.directory:", req.params.directory);
-  res.end();
-})
+// routes for getting files from RACK
+app.get(
+  '/sftp/list/:directory',
+  middleware.sftp.SFTPrequestList,
+  (req, res) => {
+    res.end();
+  }
+);
 
-app.get('/sftp/file/:file.:ext',middleware.sftp.SFTPrequestFile,(req,res)=>{
-  //console.log("req.params.file:", req.params.file);
-  //console.log("req.params.ext:", req.params.ext);
-  res.end();
-})
+app.get(
+  '/sftp/file/:file.:ext',
+  middleware.sftp.SFTPrequestFile,
+  (req, res) => {
+    res.end();
+  }
+);
 
-app.get('/sftp/download/:directory',middleware.sftp.SFTPdownloadDir,(req,res)=>{
-  //console.log("req.params.directory:", req.params.directory);
-  res.end();
-})
+app.get(
+  '/sftp/download/:directory',
+  middleware.sftp.SFTPdownloadDir,
+  (req, res) => {
+    res.end();
+  }
+);
 
-app.use(express.static('UI')); // this is the web page being served.
+// this is the web page being served.
+app.use(express.static('UI'));
 
-app.listen(process.env.PORT,(req,res)=>{
-    console.log(`server running on http://localhost:${process.env.PORT}`)
-})
+// listen for web page being opened
+app.listen(process.env.PORT, (req, res) => {
+  console.log(`server running on http://localhost:${process.env.PORT}`);
+});
