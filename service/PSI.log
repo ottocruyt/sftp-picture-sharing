@@ -1,0 +1,70 @@
+server running on http://localhost:3000
+Running Cron Job at:  8/4/2020 09:43:00
+server running on http://localhost:3000
+Running Cron Job at:  8/4/2020 10:02:00
+WARNING:  Timed out while waiting for handshake
+WARNING:  Timed out while waiting for handshake
+Total time for cron job: 41s 172.803939ms
+Problem in Cron Job:  ERR_GENERIC_CLIENT: connect: Timed out while waiting for handshake after 2 attempts
+Running Cron Job at:  8/4/2020 10:03:00
+WARNING:  Timed out while waiting for handshake
+WARNING:  Timed out while waiting for handshake
+Total time for cron job: 41s 3.097678ms
+Problem in Cron Job:  ERR_GENERIC_CLIENT: connect: Timed out while waiting for handshake after 2 attempts
+Running Cron Job at:  8/4/2020 10:04:00
+WARNING:  Timed out while waiting for handshake
+WARNING:  Timed out while waiting for handshake
+Total time for cron job: 41s 3.196983ms
+Problem in Cron Job:  ERR_GENERIC_CLIENT: connect: Timed out while waiting for handshake after 2 attempts
+Running Cron Job at:  8/4/2020 10:05:00
+WARNING:  Timed out while waiting for handshake
+WARNING:  Timed out while waiting for handshake
+Total time for cron job: 41s 4.319532ms
+Problem in Cron Job:  ERR_GENERIC_CLIENT: connect: Timed out while waiting for handshake after 2 attempts
+Running Cron Job at:  8/4/2020 10:06:00
+server running on http://localhost:3000
+Running Cron Job at:  8/4/2020 10:08:00
+GET / -- Wed Apr 08 2020 10:08:12 GMT+0200 (Midden-Europese zomertijd)
+GET /index.css -- Wed Apr 08 2020 10:08:12 GMT+0200 (Midden-Europese zomertijd)
+GET /bootstrap/js/jquery-3.4.1.min.js -- Wed Apr 08 2020 10:08:12 GMT+0200 (Midden-Europese zomertijd)
+GET /bootstrap/js/popper.min.js -- Wed Apr 08 2020 10:08:12 GMT+0200 (Midden-Europese zomertijd)
+GET /bootstrap/js/bootstrap.bundle.min.js -- Wed Apr 08 2020 10:08:12 GMT+0200 (Midden-Europese zomertijd)
+GET /bootstrap/css/sticky-footer-navbar.css -- Wed Apr 08 2020 10:08:12 GMT+0200 (Midden-Europese zomertijd)
+GET /bootstrap/css/bootstrap.min.css -- Wed Apr 08 2020 10:08:12 GMT+0200 (Midden-Europese zomertijd)
+GET /bootstrap/css/bootstrap-grid.min.css -- Wed Apr 08 2020 10:08:12 GMT+0200 (Midden-Europese zomertijd)
+GET /bootstrap/css/bootstrap-reboot.min.css -- Wed Apr 08 2020 10:08:12 GMT+0200 (Midden-Europese zomertijd)
+GET /kion_group_logo.svg -- Wed Apr 08 2020 10:08:12 GMT+0200 (Midden-Europese zomertijd)
+GET /axios.min.js -- Wed Apr 08 2020 10:08:12 GMT+0200 (Midden-Europese zomertijd)
+GET /index.js -- Wed Apr 08 2020 10:08:13 GMT+0200 (Midden-Europese zomertijd)
+GET /sftp/list/tmp -- Wed Apr 08 2020 10:08:14 GMT+0200 (Midden-Europese zomertijd)
+Setting up SFTP client...
+Starting connection to sftp server...
+logging in with user: root, pass: 
+Getting directory list of /tmp
+WARNING:  Timed out while waiting for handshake
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 22s 110.180163ms
+Received directory listing...
+GET /sftp/file/pocket.png -- Wed Apr 08 2020 10:08:36 GMT+0200 (Midden-Europese zomertijd)
+No need get pocket.png from RACK because already exists: ./UI/img/pocket.png
+GET /sftp/file/freespace2.png -- Wed Apr 08 2020 10:08:36 GMT+0200 (Midden-Europese zomertijd)
+No need get freespace2.png from RACK because already exists: ./UI/img/freespace2.png
+GET /sftp/file/freespace.png -- Wed Apr 08 2020 10:08:36 GMT+0200 (Midden-Europese zomertijd)
+No need get freespace.png from RACK because already exists: ./UI/img/freespace.png
+GET /sftp/file/beam.png -- Wed Apr 08 2020 10:08:36 GMT+0200 (Midden-Europese zomertijd)
+No need get beam.png from RACK because already exists: ./UI/img/beam.png
+GET /img/freespace2.png -- Wed Apr 08 2020 10:08:36 GMT+0200 (Midden-Europese zomertijd)
+GET /img/beam.png -- Wed Apr 08 2020 10:08:37 GMT+0200 (Midden-Europese zomertijd)
+GET /img/pocket.png -- Wed Apr 08 2020 10:08:37 GMT+0200 (Midden-Europese zomertijd)
+GET /img/freespace.png -- Wed Apr 08 2020 10:08:38 GMT+0200 (Midden-Europese zomertijd)
+Running Cron Job at:  8/4/2020 10:09:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 844.538001ms
