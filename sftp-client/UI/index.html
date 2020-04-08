@@ -4,33 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Otto Cruyt" />
-    <title>Picture Sharing interface</title>
+    <title>Picture Sharing Interface</title>
     <link rel="stylesheet" type="text/css" href="index.css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <script src="bootstrap/js/jquery-3.4.1.min.js"></script>
-    <script src="bootstrap/js/popper.min.js"></script>
-    <link rel="application/json" href="js/popper.min.js.map" />
-
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <link rel="application/json" href="js/bootstrap.bundle.min.js.map" />
-
-    <link rel="stylesheet" href="bootstrap/css/sticky-footer-navbar.css" />
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-    <link rel="application/json" href="bootstrap/css/bootstrap.min.css.map" />
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css" />
-    <link rel="application/json" href="bootstrap/css/bootstrap-grid.min.css.map" />
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-reboot.min.css" />
-    <link rel="application/json" href="bootstrap/css/bootstrap-reboot.min.css.map" />
-    <script>
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-      })
-      $(function () {
-        $('[data-toggle="popover"]').popover()
-      })
-    </script>
-
-
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/bootstrap/css/sticky-footer-navbar.css" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="application/json" href="assets/bootstrap/css/bootstrap.min.css.map" />
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -48,8 +27,7 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="bootstrap/css/sticky-footer-navbar.css" />
-  </head>
+ </head>
   <body class="d-flex flex-column h-100">
     <header>
       <!-- Fixed navbar -->
@@ -117,7 +95,7 @@
     <footer class="footer mt-auto">
       <div class="container ml-0">
         <span class="text-muted"
-          ><img src="kion_group_logo.svg" class="logo" /></span
+          ><img src="assets/img/kion_group_logo.svg" class="logo" /></span
         >
       </div>
     </footer>
@@ -164,8 +142,18 @@
       </div>
     </div>
     <!-- Settings modal end -->
-
+    <script src="assets/bootstrap/js/jquery-3.4.1.min.js"></script>
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+      })
+    </script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="application/json" href="assets/bootstrap/js/bootstrap.bundle.min.js.map" />
+    <script src="assets/js/axios.min.js"></script>
+    <script src="index.js"></script>
   </body>
-  <script src="axios.min.js"></script>
-  <script src="index.js"></script>
 </html>
