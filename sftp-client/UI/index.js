@@ -15,6 +15,22 @@ const saveSettings = document.getElementById('btn-save-settings');
 const progressBar = document.getElementById('progress-bar');
 const progressBarDiv = document.getElementById('progress-bar-div');
 
+console.log('Adding sse for progress on server side');
+const evtSource = new EventSource(`${BASE_URL}/sftp/progress`);
+evtSource.onmessage = (event) => {
+  const arrayOfDone = Object.values(JSON.parse(event.data));
+  if (arrayOfDone.length !== 0) {
+    // check if already an updated value
+    const totalDone = arrayOfDone.reduce((total, done) => total + done);
+    if (totalSize !== 0) {
+      const percDone = totalDone / totalSize;
+      setProgress(percDone);
+    }
+  }
+  //console.log('Percent done: ', percDone);
+};
+evtSource.onerror = (error) => console.error('EventSource failed:', error);
+
 nextBtn.addEventListener('click', function (e) {
   e.preventDefault();
   goToNextImage();
@@ -36,37 +52,51 @@ saveSettings.addEventListener('click', function (e) {
 let images = [];
 let currentImg = {};
 let currentImgIndex = 0;
+let totalSize = 0;
 
 async function getDirFromRemote(dir) {
   setProgress(0);
   try {
     const res = await axios.get(`${BASE_URL}/sftp/list/${dir}`);
-
     const dirlist = await res.data;
+    totalSize = dirlist.totalSize;
     console.log(`GET: here is the directory list: `, dirlist);
-
+    console.log(`GET: total size of the directory: `, dirlist.totalSize);
     //folderHeader.innerText = `Requested Folder: ${dirlist.reqdir}`;
 
     if (dirlist.err) {
       folderHeader.innerHTML = `${dirlist.errcode}
           `;
     } else {
-      //dataDiv.innerHTML = '';
       images = [];
+      console.log('Start getting individual files');
       await Promise.all(
         dirlist.dirlist.map(async (file, index) => {
           let res = await axios.get(`${BASE_URL}/sftp/file/${file.name}`);
           let date = new Date(file.modifyTime);
+          console.log('push received image');
           images.push({
             name: file.name,
             src: `/img/${res.data.reqfile}.${res.data.reqext}`,
+            size: res.data.fileSize,
             date,
           });
+          // for calculating received size
+          /*
           if (dirlist.dirlist.length !== 0) {
-            setProgress(images.length / dirlist.dirlist.length);
+            const sizes = images.reduce(
+              (sizes, img) => sizes.concat(img.size),
+              []
+            );
+            const totalReceivedSize = sizes.reduce(
+              (total, size) => total + size
+            );
           }
+          */
         })
       );
+      evtSource.close();
+      setProgress(1);
       putImageArrayInHtml();
     }
   } catch (e) {
@@ -148,14 +178,18 @@ function disableNavigationButtonIfNeeded() {
   }
 }
 
+// this is the loader bar for the progress of getting the files from the RACK! (not getting it from the webserver...)
 function setProgress(progress) {
-  console.log('Setting progress to: ', progress);
-  progressBar.setAttribute('aria-valuenow', progress * 100);
-  progressBar.setAttribute('style', `width: ${progress * 100}%`);
-  progressBar.innerText = `${progress * 100}%`;
-  if (progress === 1) {
-    progressBar.style.display = 'none';
-    progressBarDiv.style.display = 'none';
+  roundedProgress = Math.round(progress * 100);
+  //console.log('setting progress to ', roundedProgress);
+  progressBar.setAttribute('aria-valuenow', roundedProgress);
+  progressBar.setAttribute('style', `width: ${roundedProgress}%`);
+  progressBar.innerText = `${roundedProgress}%`;
+  if (roundedProgress === 100) {
+    setTimeout(() => {
+      progressBar.style.display = 'none';
+      progressBarDiv.style.display = 'none';
+    }, 1000);
   } else {
     progressBar.style.display = 'block';
     progressBarDiv.style.display = 'block';
