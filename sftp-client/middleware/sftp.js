@@ -14,12 +14,14 @@ const SFTP_OPTIONS = {
   password: RACK_PASSWORD,
 };
 
-let progress = {};
+const progress = {};
 
 const eventEmitter = new events.EventEmitter();
 
 const SFTPrequestList = async (req, res, next) => {
   let reqdirlist = req.params.directory;
+  for (let member in progress) delete progress[member];
+  console.log('progress:', progress);
   console.log('Setting up SFTP client...');
   let Client = require('ssh2-sftp-client');
   let sftp = new Client();
@@ -98,6 +100,7 @@ const SFTPrequestFile = async (req, res, next) => {
       fileExists = true;
       fileSize = fileSizeInBytes;
       progress[`${reqfile}_${reqext}`] = fileSizeInBytes;
+      console.log('progress in file:', progress);
       eventEmitter.emit('progress');
       console.log('emitted already found');
     } else {
@@ -127,6 +130,7 @@ const SFTPrequestFile = async (req, res, next) => {
           const percDone = Math.round((total_transferred / total) * 100);
           console.log(`${reqfile}.${reqext}: ${percDone}%`); // callback called each time a chunk is transferred
           progress[`${reqfile}_${reqext}`] = total_transferred;
+          console.table(progress);
           eventEmitter.emit('progress');
         },
       };

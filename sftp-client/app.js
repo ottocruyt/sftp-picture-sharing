@@ -58,6 +58,15 @@ app.get('/sftp/progress', (req, res) => {
   const progressEvent = middleware.sftp.eventEmitter;
   progressEvent.addListener('progress', () => {
     //console.log('event listener fired');
+    console.log('progress object:', middleware.sftp.progress);
+    console.log(
+      'Stringified progress object:',
+      JSON.stringify(middleware.sftp.progress)
+    );
+    console.log(
+      'Stringified progress object w data: ',
+      `data: ${JSON.stringify(middleware.sftp.progress)}\n\n`
+    );
     res.write(`data: ${JSON.stringify(middleware.sftp.progress)}\n\n`); // res.write() instead of res.send()
   });
   // If client closes connection, stop sending events
