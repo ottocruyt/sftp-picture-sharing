@@ -1,4 +1,5 @@
 require('dotenv').config();
+const cliProgress = require('cli-progress');
 const fs = require('fs');
 const events = require('events');
 const RACK_IP = process.env.RACK_IP;
@@ -14,6 +15,17 @@ const SFTP_OPTIONS = {
   password: RACK_PASSWORD,
 };
 
+const multibar = new cliProgress.MultiBar(
+  {
+    forceRedraw: true,
+    autopadding: true,
+    stopOnComplete: true,
+    clearOnComplete: true,
+    format: '{bar} | {percentage}% | {filename}',
+  },
+  cliProgress.Presets.shades_grey
+);
+
 const progress = {};
 
 const eventEmitter = new events.EventEmitter();
@@ -21,7 +33,6 @@ const eventEmitter = new events.EventEmitter();
 const SFTPrequestList = async (req, res, next) => {
   let reqdirlist = req.params.directory;
   for (let member in progress) delete progress[member];
-  console.log('progress:', progress);
   console.log('Setting up SFTP client...');
   let Client = require('ssh2-sftp-client');
   let sftp = new Client();
@@ -90,6 +101,7 @@ const SFTPrequestFile = async (req, res, next) => {
   let sftpError = false;
   let sftpErrorCode = null;
   let fileSize = 0;
+
   try {
     if (fs.existsSync(pathToImg)) {
       const stats = fs.statSync(pathToImg);
@@ -100,12 +112,11 @@ const SFTPrequestFile = async (req, res, next) => {
       fileExists = true;
       fileSize = fileSizeInBytes;
       progress[`${reqfile}_${reqext}`] = fileSizeInBytes;
-      console.log('progress in file:', progress);
       eventEmitter.emit('progress');
-      console.log('emitted already found');
     } else {
       fileExists = false;
       progress[`${reqfile}_${reqext}`] = 0;
+
       eventEmitter.emit('progress');
     }
   } catch (err) {
@@ -123,14 +134,18 @@ const SFTPrequestFile = async (req, res, next) => {
     try {
       let response = await sftp.connect(SFTP_OPTIONS);
       let remotePath = `/tmp/${reqfile}.${reqext}`;
-      console.log(`Download from ${remotePath} to ${localPath}`);
+      //console.log(`Download from ${remotePath} to ${localPath}`);
       let stats = await sftp.stat(remotePath); // gets the file stats before downloading
+      const progressbar = multibar.create(stats.size, 0);
       const downloadOptions = {
         step: (total_transferred, chunk, total) => {
           const percDone = Math.round((total_transferred / total) * 100);
-          console.log(`${reqfile}.${reqext}: ${percDone}%`); // callback called each time a chunk is transferred
+          //console.log(`${reqfile}.${reqext}: ${percDone}%`); // callback called each time a chunk is transferred
           progress[`${reqfile}_${reqext}`] = total_transferred;
-          console.table(progress);
+          progressbar.update(total_transferred, {
+            filename: `"${reqfile}.${reqext}"`,
+          });
+          //console.table(progress);
           eventEmitter.emit('progress');
         },
       };
@@ -140,10 +155,9 @@ const SFTPrequestFile = async (req, res, next) => {
         downloadOptions
       );
       fileSize = stats.size;
-      console.log('DLRES:', downloadresult);
-      console.log(
-        `Received file ${reqfile}.${reqext}... Size: ${fileSize} bytes`
-      );
+      //progressbar.stop();
+      //console.log('DLRES:', downloadresult);
+      //console.log(`Received file ${reqfile}.${reqext}... Size: ${fileSize} bytes`);
     } catch (err) {
       // catches errors both in fetch and response.json
       console.log('catched error: ', err);
