@@ -68,3 +68,226 @@ Downloaded /tmp/freespace.png to ./UI/img/
 Downloaded /tmp/beam.png to ./UI/img/
 Received folder tmp...
 Total time for cron job: 0s 844.538001ms
+server running on http://localhost:3000
+GET / -- Thu Apr 09 2020 08:58:53 GMT+0200 (Midden-Europese zomertijd)
+GET /index.css -- Thu Apr 09 2020 08:58:54 GMT+0200 (Midden-Europese zomertijd)
+GET /assets/bootstrap/css/sticky-footer-navbar.css -- Thu Apr 09 2020 08:58:54 GMT+0200 (Midden-Europese zomertijd)
+GET /assets/bootstrap/css/bootstrap.min.css -- Thu Apr 09 2020 08:58:54 GMT+0200 (Midden-Europese zomertijd)
+GET /assets/img/kion_group_logo.svg -- Thu Apr 09 2020 08:58:54 GMT+0200 (Midden-Europese zomertijd)
+GET /assets/bootstrap/js/bootstrap.bundle.min.js -- Thu Apr 09 2020 08:58:54 GMT+0200 (Midden-Europese zomertijd)
+GET /assets/bootstrap/js/jquery-3.4.1.min.js -- Thu Apr 09 2020 08:58:54 GMT+0200 (Midden-Europese zomertijd)
+GET /assets/js/axios.min.js -- Thu Apr 09 2020 08:58:54 GMT+0200 (Midden-Europese zomertijd)
+GET /index.js -- Thu Apr 09 2020 08:58:54 GMT+0200 (Midden-Europese zomertijd)
+GET /sftp/list/tmp -- Thu Apr 09 2020 08:58:55 GMT+0200 (Midden-Europese zomertijd)
+Setting up SFTP client...
+Starting connection to sftp server...
+logging in with user: root, pass: 
+Getting directory list of /tmp
+Running Cron Job at:  9/4/2020 08:59:00
+Received directory listing...
+GET /sftp/file/gdos_2020-04-09_082557.log -- Thu Apr 09 2020 08:59:17 GMT+0200 (Midden-Europese zomertijd)
+Setting up SFTP client...
+Starting connection to sftp server...
+logging in with user: root, pass: 
+Getting file gdos_2020-04-09_082557.log
+Download from /tmp/gdos_2020-04-09_082557.log to ./UI/img/gdos_2020-04-09_082557.log
+DLRES: /tmp/gdos_2020-04-09_082557.log was successfully download to UI\img\gdos_2020-04-09_082557.log!
+Received file gdos_2020-04-09_082557.log...
+GET /img/gdos_2020-04-09_082557.log -- Thu Apr 09 2020 08:59:17 GMT+0200 (Midden-Europese zomertijd)
+WARNING:  Timed out while waiting for handshake
+Downloaded /tmp/gdos_2020-04-09_082557.log to ./UI/img/
+Received folder tmp...
+Total time for cron job: 21s 443.615946ms
+Running Cron Job at:  9/4/2020 09:00:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 777.923188ms
+GET /sftp/list/tmp -- Thu Apr 09 2020 09:00:21 GMT+0200 (Midden-Europese zomertijd)
+Setting up SFTP client...
+Starting connection to sftp server...
+logging in with user: root, pass: 
+Getting directory list of /tmp
+Received directory listing...
+GET /sftp/file/pocket.png -- Thu Apr 09 2020 09:00:21 GMT+0200 (Midden-Europese zomertijd)
+No need get pocket.png from RACK because already exists: ./UI/img/pocket.png
+GET /sftp/file/freespace.png -- Thu Apr 09 2020 09:00:21 GMT+0200 (Midden-Europese zomertijd)
+No need get freespace.png from RACK because already exists: ./UI/img/freespace.png
+GET /sftp/file/freespace2.png -- Thu Apr 09 2020 09:00:21 GMT+0200 (Midden-Europese zomertijd)
+No need get freespace2.png from RACK because already exists: ./UI/img/freespace2.png
+GET /sftp/file/beam.png -- Thu Apr 09 2020 09:00:21 GMT+0200 (Midden-Europese zomertijd)
+No need get beam.png from RACK because already exists: ./UI/img/beam.png
+GET /img/freespace2.png -- Thu Apr 09 2020 09:00:21 GMT+0200 (Midden-Europese zomertijd)
+GET /img/beam.png -- Thu Apr 09 2020 09:00:25 GMT+0200 (Midden-Europese zomertijd)
+GET /img/pocket.png -- Thu Apr 09 2020 09:00:27 GMT+0200 (Midden-Europese zomertijd)
+GET /img/freespace.png -- Thu Apr 09 2020 09:00:27 GMT+0200 (Midden-Europese zomertijd)
+Running Cron Job at:  9/4/2020 09:01:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 815.635271ms
+Running Cron Job at:  9/4/2020 09:02:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 715.339059ms
+Running Cron Job at:  9/4/2020 09:03:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 928.945585ms
+Running Cron Job at:  9/4/2020 09:04:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 630.052087ms
+Running Cron Job at:  9/4/2020 09:05:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 823.422512ms
+Running Cron Job at:  9/4/2020 09:06:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 711.607798ms
+Running Cron Job at:  9/4/2020 09:07:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 787.086336ms
+Running Cron Job at:  9/4/2020 09:08:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 987.751634ms
+Running Cron Job at:  9/4/2020 09:09:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 678.575461ms
+Running Cron Job at:  9/4/2020 09:10:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 907.715689ms
+Running Cron Job at:  9/4/2020 09:11:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 788.551352ms
+Running Cron Job at:  9/4/2020 09:12:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 666.361455ms
+Running Cron Job at:  9/4/2020 09:13:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 668.028855ms
+Running Cron Job at:  9/4/2020 09:14:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 604.845503ms
+Running Cron Job at:  9/4/2020 09:15:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 647.437071ms
+Running Cron Job at:  9/4/2020 09:16:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 726.05029ms
+Running Cron Job at:  9/4/2020 09:17:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 731.87675ms
+Running Cron Job at:  9/4/2020 09:18:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 782.256313ms
+Running Cron Job at:  9/4/2020 09:19:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 680.194152ms
+Running Cron Job at:  9/4/2020 09:20:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 739.983047ms
+Running Cron Job at:  9/4/2020 09:21:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 751.44793ms
+Running Cron Job at:  9/4/2020 09:22:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 660.486664ms
+Running Cron Job at:  9/4/2020 09:23:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 892.020759ms
+Running Cron Job at:  9/4/2020 09:24:00
+Downloaded /tmp/pocket.png to ./UI/img/
+Downloaded /tmp/freespace2.png to ./UI/img/
+Downloaded /tmp/freespace.png to ./UI/img/
+Downloaded /tmp/beam.png to ./UI/img/
+Received folder tmp...
+Total time for cron job: 0s 776.048118ms

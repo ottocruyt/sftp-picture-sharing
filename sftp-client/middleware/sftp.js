@@ -21,6 +21,7 @@ const multibar = new cliProgress.MultiBar(
     autopadding: true,
     stopOnComplete: true,
     clearOnComplete: true,
+    hideCursor: true,
     format: '{bar} | {percentage}% | {filename}',
   },
   cliProgress.Presets.shades_grey
@@ -155,7 +156,10 @@ const SFTPrequestFile = async (req, res, next) => {
         downloadOptions
       );
       fileSize = stats.size;
-      //progressbar.stop();
+      progressbar.update(fileSize, {
+        filename: `"${reqfile}.${reqext}"`,
+      });
+      multibar.remove(progressbar);
       //console.log('DLRES:', downloadresult);
       //console.log(`Received file ${reqfile}.${reqext}... Size: ${fileSize} bytes`);
     } catch (err) {
