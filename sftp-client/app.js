@@ -1,5 +1,7 @@
 const middleware = require('./middleware/middleware');
 const cronjobs = require('./cron/cron-sftp');
+const uncompress = require('./cron/uncompress');
+const fs = require('fs');
 require('dotenv').config();
 
 // CRON JOB
@@ -14,9 +16,35 @@ const app = express();
 // * * * * * * = every second
 cron.schedule('* * * * *', async function () {
   console.log('Running Cron Job at: ', new Date().toLocaleString());
-  cronjobs
-    .SFTPdownloadDirPerFile()
-    .catch((error) => console.log('Problem in Cron Job: ', error.message));
+  try {
+    const downloaded = await cronjobs.SFTPdownloadDirPerFile();
+    await Promise.all(
+      downloaded.files.map(async (file) => {
+        if (file.name.endsWith('.tar.gz') || file.name.endsWith('.tar')) {
+          await uncompress.uncompress(
+            file.name,
+            downloaded.localdir,
+            process.env.LOCAL_IMG_PATH
+          );
+        } else {
+          // not a .tar or .tar.gz: just copy it to the img folder
+          fs.copyFile(
+            `${downloaded.localdir}${file.name}`,
+            `${process.env.LOCAL_IMG_PATH}${file.name}`,
+            (e) => {
+              if (e !== null) {
+                console.log(e);
+              } else {
+                console.log('Finished copying ', file.name);
+              }
+            }
+          );
+        }
+      })
+    );
+  } catch (err) {
+    console.log('Problem in Cron Job: ', err.message);
+  }
 });
 
 // application level middleware for logging

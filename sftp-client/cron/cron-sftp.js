@@ -8,6 +8,7 @@ const RACK_USER = process.env.RACK_USER;
 const RACK_PASSWORD = process.env.RACK_PASSWORD;
 const CORS_ORIGIN = process.env.CORS_ORIGIN;
 const LOCAL_IMG_PATH = process.env.LOCAL_IMG_PATH; // local path of the node server.
+const LOCAL_DL_PATH = process.env.LOCAL_DL_PATH; // local path to download to on the node server
 const REMOTE_IMG_PATH = process.env.REMOTE_IMG_PATH; // remote path of the rack folder = 'tmp'
 const SFTP_OPTIONS = {
   host: RACK_IP,
@@ -95,7 +96,7 @@ const SFTPdownloadDirPerFile = async () => {
     }
 
     let remotePath = `/${reqfolder}`;
-    let localPath = `${LOCAL_IMG_PATH}`;
+    let localPath = `${LOCAL_DL_PATH}`;
     //console.log(`Download from ${remotePath} to ${localPath}`);
 
     try {
@@ -110,7 +111,7 @@ const SFTPdownloadDirPerFile = async () => {
     sftp.client.setMaxListeners(dirlist.length + 1); // prevent memory leak warning
     await Promise.all(
       dirlist.map(async (file) => {
-        const localPathToImg = `${LOCAL_IMG_PATH}${file.name}`;
+        const localPathToImg = `${LOCAL_DL_PATH}${file.name}`;
         const remotePathToImg = `${remotePath}/${file.name}`;
         const fileExists = checkIfAlreadyLocally(localPathToImg);
         if (!fileExists) {
@@ -124,9 +125,13 @@ const SFTPdownloadDirPerFile = async () => {
         }
       })
     );
-    const filesLocally = await checkNumberOfLocalFiles(LOCAL_IMG_PATH);
+    const filesLocally = await checkNumberOfLocalFiles(LOCAL_DL_PATH);
     console.log(`==> ${filesLocally} files on server locally`);
     closeConnection(hrstart);
+    return {
+      localdir: LOCAL_DL_PATH,
+      files: dirlist,
+    };
   } catch (error) {
     if (error instanceof KnownError) {
       throw error;
@@ -170,7 +175,7 @@ async function closeConnection(hrstart) {
   } finally {
     const hrend = process.hrtime(hrstart);
     console.info(
-      'Total time for cron job: %ds %dms',
+      'Total time for download in cron job: %ds %dms',
       hrend[0],
       hrend[1] / 1000000
     );
