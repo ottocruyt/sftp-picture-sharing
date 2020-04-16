@@ -1,5 +1,7 @@
 require('dotenv').config();
+const { promisify } = require('util');
 const fs = require('fs');
+const readdirAsync = promisify(fs.readdir);
 const RACK_IP = process.env.RACK_IP;
 const RACK_PORT = process.env.RACK_PORT;
 const RACK_USER = process.env.RACK_USER;
@@ -73,6 +75,92 @@ const SFTPdownloadDir = async () => {
   }
 };
 
+const SFTPdownloadDirPerFile = async () => {
+  try {
+    let reqfolder = REMOTE_IMG_PATH;
+    const hrstart = process.hrtime();
+    let Client = require('ssh2-sftp-client');
+    let sftp = new Client();
+
+    sftp.on('error', (err) => {
+      console.log('WARNING: ', err.message); // catch error that is not handled
+    });
+
+    let dirlist;
+    try {
+      await sftp.connect(SFTP_OPTIONS);
+    } catch (error) {
+      closeConnection(hrstart);
+      throw new KnownError(`${error.code}: ${error.message}`);
+    }
+
+    let remotePath = `/${reqfolder}`;
+    let localPath = `${LOCAL_IMG_PATH}`;
+    //console.log(`Download from ${remotePath} to ${localPath}`);
+
+    try {
+      dirlist = await sftp.list(remotePath);
+    } catch (error) {
+      closeConnection(hrstart);
+      throw new KnownError(`${error.code}: ${error.message}`);
+    }
+
+    //console.log(dirlist);
+    console.log(`${dirlist.length} files on RACK server`);
+    sftp.client.setMaxListeners(dirlist.length + 1); // prevent memory leak warning
+    await Promise.all(
+      dirlist.map(async (file) => {
+        const localPathToImg = `${LOCAL_IMG_PATH}${file.name}`;
+        const remotePathToImg = `${remotePath}/${file.name}`;
+        const fileExists = checkIfAlreadyLocally(localPathToImg);
+        if (!fileExists) {
+          await sftp.fastGet(remotePathToImg, localPathToImg, {
+            step: (total_transferred, chuck, total) => {
+              if (total_transferred === total) {
+                console.log(`${file.name} downloaded.`);
+              }
+            },
+          });
+        }
+      })
+    );
+    const filesLocally = await checkNumberOfLocalFiles(LOCAL_IMG_PATH);
+    console.log(`==> ${filesLocally} files on server locally`);
+    closeConnection(hrstart);
+  } catch (error) {
+    if (error instanceof KnownError) {
+      throw error;
+    } else {
+      console.log('Unhandled error catched: ', error.message);
+      console.error(error);
+    }
+  }
+};
+
+function checkIfAlreadyLocally(pathToImg) {
+  try {
+    if (fs.existsSync(pathToImg)) {
+      //console.log(`No need get from RACK because already exists: ${pathToImg}`);
+      return true;
+    } else {
+      return false;
+    }
+  } catch (err) {
+    console.error(err);
+    return null;
+  }
+}
+
+async function checkNumberOfLocalFiles(localFolderPath) {
+  try {
+    const res = await readdirAsync(localFolderPath);
+    return res.length;
+  } catch (err) {
+    console.error(err);
+    return 0;
+  }
+}
+
 async function closeConnection(hrstart) {
   try {
     await sftp.end();
@@ -91,4 +179,5 @@ async function closeConnection(hrstart) {
 
 module.exports = {
   SFTPdownloadDir,
+  SFTPdownloadDirPerFile,
 };

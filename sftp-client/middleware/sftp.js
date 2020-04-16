@@ -202,9 +202,11 @@ const SFTPdownloadDir = async (req, res, next) => {
     let remotePath = `/${reqfolder}`;
     let localPath = `${LOCAL_IMG_PATH}${reqfolder}`;
     console.log(`Download from ${remotePath} to ${localPath}`);
+
     sftp.on('download', (info) => {
       console.log(`Listener: Download ${info.source}`);
     });
+
     let downloadresult = await sftp.downloadDir(remotePath, localPath);
     console.log('DLRES:', downloadresult);
     console.log(`Received folder ${reqfolder}...`);

@@ -13,12 +13,10 @@ const app = express();
 // * * * * * = every minute
 // * * * * * * = every second
 cron.schedule('* * * * *', async function () {
-  /*
   console.log('Running Cron Job at: ', new Date().toLocaleString());
   cronjobs
-    .SFTPdownloadDir()
+    .SFTPdownloadDirPerFile()
     .catch((error) => console.log('Problem in Cron Job: ', error.message));
-*/
 });
 
 // application level middleware for logging
@@ -67,6 +65,8 @@ app.get('/sftp/progress', (req, res) => {
     res.end();
   });
 });
+
+process.on('warning', (e) => console.warn('process warning: ', e.stack));
 
 // this is the web page being served.
 app.use(express.static('UI'));
