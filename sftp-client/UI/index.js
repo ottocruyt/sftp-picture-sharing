@@ -12,8 +12,9 @@ const sliderImg = document.getElementById('slider_img');
 const imgHeader = document.getElementById('img-header');
 const navLinkLatest = document.getElementById('nav-link-latest');
 const saveSettings = document.getElementById('btn-save-settings');
-const progressBar = document.getElementById('progress-bar');
-const progressBarDiv = document.getElementById('progress-bar-div');
+const progressBarServer = document.getElementById('progress-bar-server');
+const progressBarServerDiv = document.getElementById('progress-bar-server-div');
+const imgSpinner = document.getElementById('img-spinner');
 
 console.log('Adding sse for progress on server side');
 const evtSource = new EventSource(`${BASE_URL}/sftp/progress`);
@@ -24,7 +25,7 @@ evtSource.onmessage = (event) => {
     const totalDone = arrayOfDone.reduce((total, done) => total + done);
     if (totalSize !== 0) {
       const percDone = totalDone / totalSize;
-      setProgress(percDone);
+      setProgress(percDone, 'server');
     }
   }
   //console.log('Percent done: ', percDone);
@@ -55,7 +56,7 @@ let currentImgIndex = 0;
 let totalSize = 0;
 
 async function getDirFromRemote(dir) {
-  setProgress(0);
+  setProgress(0, 'server');
   try {
     const res = await axios.get(`${BASE_URL}/sftp/list/${dir}`);
     const dirlist = await res.data;
@@ -96,7 +97,7 @@ async function getDirFromRemote(dir) {
         })
       );
       evtSource.close();
-      setProgress(1);
+      setProgress(1, 'server');
       putImageArrayInHtml();
     }
   } catch (e) {
@@ -141,7 +142,11 @@ function showCurrentImage() {
   imgHeader.innerHTML = `${currentImg.date.toLocaleString()} (${
     currentImg.name
   })`;
-  sliderImg.src = currentImg.src;
+  imgSpinner.style.display = 'flex';
+  PreLoadImage(currentImg.src, sliderImg, () => {
+    imgSpinner.style.display = 'none';
+    sliderImg.style.display = 'block';
+  });
   disableNavigationButtonIfNeeded();
 }
 
@@ -178,20 +183,48 @@ function disableNavigationButtonIfNeeded() {
   }
 }
 
-// this is the loader bar for the progress of getting the files from the RACK! (not getting it from the webserver...)
-function setProgress(progress) {
+// route defines which progressbar
+function setProgress(progress, route) {
+  let progressBarToUpdate;
+  let progressBarToUpdateDiv;
   roundedProgress = Math.round(progress * 100);
-  //console.log('setting progress to ', roundedProgress);
-  progressBar.setAttribute('aria-valuenow', roundedProgress);
-  progressBar.setAttribute('style', `width: ${roundedProgress}%`);
-  progressBar.innerText = `${roundedProgress}%`;
+  switch (route) {
+    //case 'client':
+    //  progressBarToUpdate = progressBarClient;
+    // progressBarToUpdateDiv = progressBarClientDiv;
+    //  break;
+    case 'server':
+      progressBarToUpdate = progressBarServer;
+      progressBarToUpdateDiv = progressBarServerDiv;
+      break;
+    default:
+      return;
+  }
+
+  progressBarToUpdate.setAttribute('aria-valuenow', roundedProgress);
+  progressBarToUpdate.setAttribute('style', `width: ${roundedProgress}%`);
+  progressBarToUpdate.innerText = `${roundedProgress}%`;
   if (roundedProgress === 100) {
     setTimeout(() => {
-      progressBar.style.display = 'none';
-      progressBarDiv.style.display = 'none';
+      progressBarToUpdate.style.display = 'none';
+      progressBarServerDiv.style.display = 'none';
     }, 1000);
   } else {
-    progressBar.style.display = 'block';
-    progressBarDiv.style.display = 'block';
+    progressBarToUpdate.style.display = 'block';
+    progressBarServerDiv.style.display = 'block';
   }
+}
+
+function PreLoadImage(srcURL, element, callback, errorCallback) {
+  element.src = '';
+  element.style.display = 'none';
+  element.onload = function () {
+    callback();
+    element.onload = function () {};
+  };
+
+  element.onerror = function () {
+    errorCallback();
+  };
+  element.src = srcURL;
 }

@@ -7,9 +7,15 @@
     <title>Picture Sharing Interface</title>
     <link rel="stylesheet" type="text/css" href="index.css" />
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="assets/bootstrap/css/sticky-footer-navbar.css" />
+    <link
+      rel="stylesheet"
+      href="assets/bootstrap/css/sticky-footer-navbar.css"
+    />
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
-    <link rel="application/json" href="assets/bootstrap/css/bootstrap.min.css.map" />
+    <link
+      rel="application/json"
+      href="assets/bootstrap/css/bootstrap.min.css.map"
+    />
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -27,7 +33,7 @@
       }
     </style>
     <!-- Custom styles for this template -->
- </head>
+  </head>
   <body class="d-flex flex-column h-100">
     <header>
       <!-- Fixed navbar -->
@@ -52,10 +58,24 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" data-toggle="modal" data-target="#settingsModal">Settings</a>
+              <a
+                class="nav-link"
+                href="#"
+                data-toggle="modal"
+                data-target="#settingsModal"
+                >Settings</a
+              >
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
                 Select Vehicle
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -72,21 +92,42 @@
     <main role="main" class="container mb-3">
       <div class="container">
         <h1 id="header" class="header"></h1>
-      <div class="container">
-        <div class="progress" id="progress-bar-div">
-          <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">0%</div>
-        </div>
-        <div class="slider_wrapper">
-          <h2 class="img-header" id="img-header"></h2>
-          <br />
-          <div class="container nvgt-container mt-1 pb-3 mb-3">
-            <button type="button" class="btn nvgt btn-dark" id="prev">
-              PREVIOUS
-            </button>
-            <button type="button" class="btn nvgt btn-dark" id="next">
-              NEXT
-            </button>
-          </div> <br/>
+        <div class="container">
+          <div class="progress" id="progress-bar-server-div">
+            <div
+              id="progress-bar-server"
+              class="progress-bar progress-bar-striped progress-bar-animated"
+              role="progressbar"
+              aria-valuenow="0"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              style="width: 0%;"
+            >
+              0%
+            </div>
+          </div>
+          <div class="slider_wrapper">
+            <h2 class="img-header" id="img-header"></h2>
+            <br />
+            <div class="container nvgt-container mt-1 pb-3 mb-3">
+              <button type="button" class="btn nvgt btn-dark" id="prev">
+                PREVIOUS
+              </button>
+              <button type="button" class="btn nvgt btn-dark" id="next">
+                NEXT
+              </button>
+            </div>
+            <br />
+            <div id="spinner-container">
+              <div
+                class="spinner-border spinner-border"
+                role="status"
+                id="img-spinner"
+              >
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+          </div>
           <img src="" id="slider_img" />
         </div>
       </div>
@@ -95,18 +136,30 @@
     <footer class="footer mt-auto">
       <div class="container ml-0">
         <span class="text-muted"
-          ><img src="assets/img/kion_group_logo.svg" class="logo" /></span
-        >
+          ><img src="assets/img/kion_group_logo.svg" class="logo"
+        /></span>
       </div>
     </footer>
 
     <!-- Settings modal begin -->
-    <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalTitle" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="settingsModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="settingsModalTitle"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLongTitle">Settings</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
@@ -114,29 +167,60 @@
             <form>
               <div class="form-group">
                 <label for="rack-username">Rack Username</label>
-                <input type="text" class="form-control" id="rack-username" placeholder="Enter Rack Username" autocomplete="on">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="rack-username"
+                  placeholder="Enter Rack Username"
+                  autocomplete="on"
+                />
               </div>
               <div class="form-group">
                 <label for="rack-password">Rack Password</label>
-                <input type="password" class="form-control" id="rack-password" placeholder="Enter Rack Password"autocomplete="on">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="rack-password"
+                  placeholder="Enter Rack Password"
+                  autocomplete="on"
+                />
               </div>
               <div class="form-group">
                 <label for="rack-password">Rack Port</label>
-                <input type="number" class="form-control" id="rack-port" placeholder="Enter Rack Port number">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="rack-port"
+                  placeholder="Enter Rack Port number"
+                />
               </div>
               <div class="form-group">
                 <label for="rack-folder">Rack Folder</label>
-                <input type="text" class="form-control" id="rack-folder" placeholder="Enter Rack Folder">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="rack-folder"
+                  placeholder="Enter Rack Folder"
+                />
               </div>
               <div class="form-group">
                 <label for="vehicle-xml">Select vehicle.xml</label>
-                <input type="file" class="form-control-file" id="vehicle-xml">
+                <input type="file" class="form-control-file" id="vehicle-xml" />
               </div>
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-warning" data-dismiss="modal" id="btn-save-settings">Save changes</button>
+            <button type="button" class="btn btn-dark" data-dismiss="modal">
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-warning"
+              data-dismiss="modal"
+              id="btn-save-settings"
+            >
+              Save changes
+            </button>
           </div>
         </div>
       </div>
@@ -145,14 +229,17 @@
     <script src="assets/bootstrap/js/jquery-3.4.1.min.js"></script>
     <script>
       $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-      })
+        $('[data-toggle="tooltip"]').tooltip();
+      });
       $(function () {
-        $('[data-toggle="popover"]').popover()
-      })
+        $('[data-toggle="popover"]').popover();
+      });
     </script>
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <link rel="application/json" href="assets/bootstrap/js/bootstrap.bundle.min.js.map" />
+    <link
+      rel="application/json"
+      href="assets/bootstrap/js/bootstrap.bundle.min.js.map"
+    />
     <script src="assets/js/axios.min.js"></script>
     <script src="index.js"></script>
   </body>

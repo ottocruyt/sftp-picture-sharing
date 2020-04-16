@@ -25,3 +25,14 @@ button:disabled {
   width: 100%;
   height: auto;
 }
+
+#spinner-container {
+  width: 100%;
+}
+
+#img-spinner {
+  margin: auto;
+  width: 10em;
+  height: 10em;
+  display: flex;
+}
