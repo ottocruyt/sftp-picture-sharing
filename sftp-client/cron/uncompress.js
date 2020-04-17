@@ -1,6 +1,13 @@
 const tar = require('tar');
 const process = require('process');
 
+class CompressingError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = 'CompressingError';
+  }
+}
+
 const uncompress = async (file, srcdir, destdir) => {
   const hrstart = process.hrtime();
   if (!file.endsWith('.tar.gz') && !file.endsWith('.tar')) {
@@ -28,7 +35,12 @@ const uncompress = async (file, srcdir, destdir) => {
         hrend[1] / 1000000
       );
     })
-    .catch(() => console.log(`Problem uncompressing ${file}...`));
+    .catch((error) => {
+      console.log(
+        `Problem uncompressing ${file}... catched in uncompress, rethrowing error`
+      );
+      throw new CompressingError('Compressing Error: ' + error.message);
+    });
 };
 
 module.exports = {

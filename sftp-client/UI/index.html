@@ -91,9 +91,18 @@
     <!-- Begin page content -->
     <main role="main" class="container mb-3">
       <div class="container">
-        <h1 id="header" class="header"></h1>
+        <h1
+          id="header"
+          class="header"
+          data-toggle="tooltip"
+          data-placement="bottom"
+        ></h1>
         <div class="container">
-          <div class="progress" id="progress-bar-server-div">
+          <div
+            class="progress"
+            id="progress-bar-server-div"
+            style="display: none;"
+          >
             <div
               id="progress-bar-server"
               class="progress-bar progress-bar-striped progress-bar-animated"
@@ -110,11 +119,19 @@
             <h2 class="img-header" id="img-header"></h2>
             <br />
             <div class="container nvgt-container mt-1 pb-3 mb-3">
-              <button type="button" class="btn nvgt btn-dark" id="prev">
-                PREVIOUS
+              <button
+                type="button"
+                class="btn nvgt btn-dark disabled"
+                id="prev"
+              >
+                NEWER
               </button>
-              <button type="button" class="btn nvgt btn-dark" id="next">
-                NEXT
+              <button
+                type="button"
+                class="btn nvgt btn-dark disabled"
+                id="next"
+              >
+                OLDER
               </button>
             </div>
             <br />

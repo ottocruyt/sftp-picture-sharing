@@ -58,12 +58,11 @@ const SFTPrequestList = async (req, res, next) => {
       dirlist,
       totalSize,
       err: false,
-      errcode: null,
     });
     //console.log("dirlist: ",dirlist);
   } catch (err) {
     // catches errors both in fetch and response.json
-    console.log('catched error: ', err);
+    console.log('catched error: ', err.message);
     console.log('Sending error response...');
     res.header('Access-Control-Allow-Origin', CORS_ORIGIN); // update to match the domain you will make the request from
     res.header(
@@ -72,9 +71,9 @@ const SFTPrequestList = async (req, res, next) => {
     );
     res.json({
       reqdir: reqdirlist,
-      dirlist: null,
       err: true,
       errcode: err.code,
+      errmsg: err.message,
     });
   } finally {
     try {

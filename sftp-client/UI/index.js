@@ -16,22 +16,6 @@ const progressBarServer = document.getElementById('progress-bar-server');
 const progressBarServerDiv = document.getElementById('progress-bar-server-div');
 const imgSpinner = document.getElementById('img-spinner');
 
-console.log('Adding sse for progress on server side');
-const evtSource = new EventSource(`${BASE_URL}/sftp/progress`);
-evtSource.onmessage = (event) => {
-  const arrayOfDone = Object.values(JSON.parse(event.data));
-  if (arrayOfDone.length !== 0) {
-    // check if already an updated value
-    const totalDone = arrayOfDone.reduce((total, done) => total + done);
-    if (totalSize !== 0) {
-      const percDone = totalDone / totalSize;
-      setProgress(percDone, 'server');
-    }
-  }
-  //console.log('Percent done: ', percDone);
-};
-evtSource.onerror = (error) => console.error('EventSource failed:', error);
-
 nextBtn.addEventListener('click', function (e) {
   e.preventDefault();
   goToNextImage();
@@ -56,19 +40,26 @@ let currentImgIndex = 0;
 let totalSize = 0;
 
 async function getDirFromRemote(dir) {
-  setProgress(0, 'server');
+  const evtSource = subscribeToServerProgress();
   try {
     const res = await axios.get(`${BASE_URL}/sftp/list/${dir}`);
     const dirlist = await res.data;
-    totalSize = dirlist.totalSize;
-    console.log(`GET: here is the directory list: `, dirlist);
-    console.log(`GET: total size of the directory: `, dirlist.totalSize);
+
+    console.log(`GET: here is the directory list response: `, dirlist);
+
     //folderHeader.innerText = `Requested Folder: ${dirlist.reqdir}`;
 
     if (dirlist.err) {
-      folderHeader.innerHTML = `${dirlist.errcode}
-          `;
+      folderHeader.innerHTML = 'Problem connecting to server...';
+      folderHeader.setAttribute(
+        'data-original-title',
+        `Error message: ${dirlist.errmsg}
+          `
+      );
+      evtSource.close();
     } else {
+      totalSize = dirlist.totalSize;
+      console.log(`Total size of the directory: `, dirlist.totalSize);
       images = [];
       console.log('Start getting individual files');
       await Promise.all(
@@ -116,6 +107,7 @@ async function getFileFromRemote(file) {
 
     folderHeader.innerText = `Requested File: ${responseFile.reqfile}.${responseFile.reqext}`;
     if (responseFile.err) {
+      hideProgress('server');
       dataDiv.innerHTML = `${responseFile.errcode}
           `;
     } else {
@@ -184,34 +176,45 @@ function disableNavigationButtonIfNeeded() {
 }
 
 // route defines which progressbar
-function setProgress(progress, route) {
-  let progressBarToUpdate;
-  let progressBarToUpdateDiv;
+function setProgress(progress, bar) {
+  let { progressBarToUpdate } = getProgressBar(bar);
   roundedProgress = Math.round(progress * 100);
-  switch (route) {
-    //case 'client':
-    //  progressBarToUpdate = progressBarClient;
-    // progressBarToUpdateDiv = progressBarClientDiv;
-    //  break;
-    case 'server':
-      progressBarToUpdate = progressBarServer;
-      progressBarToUpdateDiv = progressBarServerDiv;
-      break;
-    default:
-      return;
-  }
-
   progressBarToUpdate.setAttribute('aria-valuenow', roundedProgress);
   progressBarToUpdate.setAttribute('style', `width: ${roundedProgress}%`);
   progressBarToUpdate.innerText = `${roundedProgress}%`;
   if (roundedProgress === 100) {
     setTimeout(() => {
-      progressBarToUpdate.style.display = 'none';
-      progressBarServerDiv.style.display = 'none';
+      hideProgress(bar);
     }, 1000);
   } else {
-    progressBarToUpdate.style.display = 'block';
-    progressBarServerDiv.style.display = 'block';
+    showProgress(bar);
+  }
+}
+
+function hideProgress(bar) {
+  let { progressBarToUpdate, progressBarToUpdateDiv } = getProgressBar(bar);
+  progressBarToUpdate.style.display = 'none';
+  progressBarToUpdateDiv.style.display = 'none';
+}
+function showProgress(bar) {
+  let { progressBarToUpdate, progressBarToUpdateDiv } = getProgressBar(bar);
+  progressBarToUpdate.style.display = 'block';
+  progressBarToUpdateDiv.style.display = 'block';
+}
+
+function getProgressBar(bar) {
+  switch (bar) {
+    //case 'client':
+    //  progressBarToUpdate = progressBarClient;
+    // progressBarToUpdateDiv = progressBarClientDiv;
+    //  break;
+    case 'server':
+      return {
+        progressBarToUpdate: progressBarServer,
+        progressBarToUpdateDiv: progressBarServerDiv,
+      };
+    default:
+      return;
   }
 }
 
@@ -227,4 +230,24 @@ function PreLoadImage(srcURL, element, callback, errorCallback) {
     errorCallback();
   };
   element.src = srcURL;
+}
+
+function subscribeToServerProgress() {
+  console.log('Adding sse for progress on server side');
+  const evtSource = new EventSource(`${BASE_URL}/sftp/progress`);
+  evtSource.onmessage = (event) => {
+    const arrayOfDone = Object.values(JSON.parse(event.data));
+    if (arrayOfDone.length !== 0) {
+      // check if already an updated value
+      const totalDone = arrayOfDone.reduce((total, done) => total + done);
+      if (totalSize !== 0) {
+        const percDone = totalDone / totalSize;
+        setProgress(percDone, 'server');
+      }
+    }
+    //console.log('Percent done: ', percDone);
+  };
+  evtSource.onerror = (error) => console.error('EventSource failed:', error);
+
+  return evtSource;
 }
