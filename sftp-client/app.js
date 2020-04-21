@@ -1,5 +1,6 @@
 const middleware = require('./middleware/middleware');
 const cronjobs = require('./cron/cron-sftp');
+const xmlParser = require('./utils/xmlParser');
 const uncompress = require('./cron/uncompress');
 const fs = require('fs');
 require('dotenv').config();
@@ -15,35 +16,39 @@ const app = express();
 // * * * * * = every minute
 // * * * * * * = every second
 cron.schedule('* * * * *', async function () {
-  console.log('Running Cron Job at: ', new Date().toLocaleString());
-  try {
-    const downloaded = await cronjobs.SFTPdownloadDirPerFile();
-    await Promise.all(
-      downloaded.files.map(async (file) => {
-        if (file.name.endsWith('.tar.gz') || file.name.endsWith('.tar')) {
-          await uncompress.uncompress(
-            file.name,
-            downloaded.localdir,
-            process.env.LOCAL_IMG_PATH
-          );
-        } else {
-          // not a .tar or .tar.gz: just copy it to the img folder
-          fs.copyFile(
-            `${downloaded.localdir}${file.name}`,
-            `${process.env.LOCAL_IMG_PATH}${file.name}`,
-            (e) => {
-              if (e !== null) {
-                console.log(e);
-              } else {
-                console.log('Finished copying ', file.name);
+  console.log('Running Cron Jobs at: ', new Date().toLocaleString());
+  if (process.env.ENABLE_CRON_JOBS === 'TRUE') {
+    try {
+      const downloaded = await cronjobs.SFTPdownloadDirPerFile();
+      await Promise.all(
+        downloaded.files.map(async (file) => {
+          if (file.name.endsWith('.tar.gz') || file.name.endsWith('.tar')) {
+            await uncompress.uncompress(
+              file.name,
+              downloaded.localdir,
+              process.env.LOCAL_IMG_PATH
+            );
+          } else {
+            // not a .tar or .tar.gz: just copy it to the img folder
+            fs.copyFile(
+              `${downloaded.localdir}${file.name}`,
+              `${process.env.LOCAL_IMG_PATH}${file.name}`,
+              (e) => {
+                if (e !== null) {
+                  console.log(e);
+                } else {
+                  console.log('Finished copying ', file.name);
+                }
               }
-            }
-          );
-        }
-      })
-    );
-  } catch (err) {
-    console.log('Problem in Cron Job: ', err.message);
+            );
+          }
+        })
+      );
+    } catch (err) {
+      console.log('Problem in Cron Job: ', err.message);
+    }
+  } else {
+    console.log('Cron Jobs disabled by environment settings');
   }
 });
 
@@ -74,6 +79,12 @@ app.get(
     res.end();
   }
 );
+
+app.get('/iplist', async (req, res) => {
+  const iplist = await xmlParser.xmlParser();
+  res.json(iplist);
+  //res.end();
+});
 
 app.get('/sftp/progress', (req, res) => {
   console.log('client connected on progress feedback');

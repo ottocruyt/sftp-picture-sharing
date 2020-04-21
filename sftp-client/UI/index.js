@@ -3,6 +3,7 @@ const BASE_URL = 'http://localhost:3000'; // replace localhost with the IP of th
 const RACK_FOLDER = 'tmp'; // folder on the rack where to get the files
 
 window.onload = function () {
+  populateVehicleList();
   getDirFromRemote(RACK_FOLDER);
 };
 const folderHeader = document.getElementById('header');
@@ -15,6 +16,7 @@ const saveSettings = document.getElementById('btn-save-settings');
 const progressBarServer = document.getElementById('progress-bar-server');
 const progressBarServerDiv = document.getElementById('progress-bar-server-div');
 const imgSpinner = document.getElementById('img-spinner');
+const vehicleListDropDown = document.getElementById('vehicle-list-dropdown');
 
 nextBtn.addEventListener('click', function (e) {
   e.preventDefault();
@@ -33,7 +35,7 @@ saveSettings.addEventListener('click', function (e) {
   console.log('saving settings');
   // should post settings... locally?
 });
-
+let iplist = [];
 let images = [];
 let currentImg = {};
 let currentImgIndex = 0;
@@ -250,4 +252,25 @@ function subscribeToServerProgress() {
   evtSource.onerror = (error) => console.error('EventSource failed:', error);
 
   return evtSource;
+}
+
+async function getIPList() {
+  console.log('Getting ip list from server');
+  const res = await axios.get(`${BASE_URL}/iplist`);
+  if (!res.data.error) {
+    iplist = res.data;
+  }
+  console.log('local iplist: ');
+  console.table(iplist);
+}
+
+async function populateVehicleList() {
+  await getIPList();
+  iplist.map((vehicle) => {
+    const vehicleLink = document.createElement('a');
+    vehicleLink.classList = 'dropdown-item';
+    vehicleLink.setAttribute('href', '#');
+    vehicleLink.innerHTML = `<strong>${vehicle.ID}</strong> (${vehicle.IP})`;
+    vehicleListDropDown.appendChild(vehicleLink);
+  });
 }
